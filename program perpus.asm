@@ -205,9 +205,7 @@ hasil1:
     LEA DX,tampung_judul
     INT 21H 
     
-    MOV AH,09H
-    LEA DX,thx 
-    INT 21H
+    jmp tq
        
     INT 20H
     
@@ -223,9 +221,7 @@ hasil2:
     LEA DX,tampung_judul
     INT 21H 
     
-    MOV AH,09H
-    LEA DX,thx 
-    INT 21H
+    jmp tq
     
     INT 20H 
 
@@ -241,9 +237,7 @@ hasil3:
     LEA DX,tampung_judul
     INT 21H   
     
-    MOV AH,09H
-    LEA DX,thx 
-    INT 21H
+    jmp tq
     
     INT 20H
     
@@ -259,9 +253,7 @@ hasil4:
     LEA DX,tampung_judul
     INT 21H     
     
-    MOV AH,09H
-    LEA DX,thx 
-    INT 21H
+    jmp tq
     
     INT 20H
     
@@ -277,9 +269,7 @@ hasil5:
     LEA DX,tampung_judul
     INT 21H 
     
-    MOV AH,09H
-    LEA DX,thx 
-    INT 21H
+    jmp tq
     
     INT 20H   
     
@@ -295,9 +285,7 @@ hasil6:
     LEA DX,tampung_judul
     INT 21H   
     
-    MOV AH,09H
-    LEA DX,thx 
-    INT 21H
+    jmp tq
     
     INT 20H
     
@@ -313,11 +301,14 @@ hasil7:
     LEA DX,tampung_judul
     INT 21H
     
+    jmp tq
+    
+    INT 20H  
+
+tq:
     MOV AH,09H
     LEA DX,thx 
-    INT 21H
-    
-    INT 20H     
+    INT 21H   
     
 teks1 db 13,10,'Anda melakukan peminjaman buku berbentuk buku teks $ ' 
 teks2 db 13,10,'Anda melakukan peminjaman buku berbentuk E-Book','$'
